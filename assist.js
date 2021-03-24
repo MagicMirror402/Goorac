@@ -25,11 +25,11 @@ function read(text){
     else if(text.includes('covid-19'))
     covid() ;
     else if(text.includes('good morning'))
-    responsiveVoice.speak("good morning . You made my morning feel good . What can i do for you?",'US English Female');
+    responsiveVoice.speak("good morning . You made my morning feel good . What can i do for you?");
     else if(text.includes('how are you'))
-    responsiveVoice.speak('I m good . How can i help for you','US English Female')
+    responsiveVoice.speak('I m good . How can i help for you')
     else if(text.includes('yourself'))
-    responsiveVoice.speak('I m a two way mirror with electronic display behind me . I can show you details like time date weather and news update . And also I can guide you to the various blocks of our college.','US English Female' )
+    responsiveVoice.speak('I m a two way mirror with electronic display behind me . I can show you details like time date weather and news update . And also I can guide you to the various blocks of our college.')
     
 }
 
