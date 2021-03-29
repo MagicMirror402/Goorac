@@ -31,7 +31,7 @@ function read(text){
   document.getElementById("showskill").src = "https://www.bing.com/search?q=" + text + "&qs=HS&sc=2-0&cvid=5790E035BDA84F518BFDE2AC9EE58276&FORM=QBLH&sp=1";
     var speech = new SpeechSynthesisUtterance();
     speech.text = text;
-    if(text.includes('electrical science'))
+    if(text.includes('electronics and communication'))
     garden();
     else if(text.includes('computer science'))
     cse();
@@ -54,7 +54,7 @@ function read(text){
     else if(text.includes('good morning'))
     responsiveVoice.speak("good morning . You made my morning feel good . What can i do for you?");
     else if(text.includes('how are you'))
-    responsiveVoice.speak('I m good . How can i help for you')
+    responsiveVoice.speak('I m good. Thanks for asking . How can i help for you')
     else if(text.includes('yourself'))
     responsiveVoice.speak('I m a two way mirror with electronic display behind me . I can show you details like time date weather and news update . And also I can guide you to the various blocks of our college.')
     else if(text.includes('communication lab'))
@@ -97,9 +97,20 @@ function read(text){
     garden();
     else if(text.includes('information technology'))
     cse();
+    else if(text.includes('good afternoon'))
+    responsiveVoice.speak("good afternoon . Did you had your lunch ? . What can i do for you?");
+    else if(text.includes('good evening'))
+    responsiveVoice.speak("good evening . look at the sunset and give me a smile. What can i do for you?");  
+    else if(text.includes('hello'))
+    responsiveVoice.speak("hello . It's so nice to see you again . what can i do for you?");
+    else if(text.includes('hai'))
+    responsiveVoice.speak("hai . What can i do for you?");
+    else if(text.includes('hi'))
+    responsiveVoice.speak("hi . What can i do for you?");
+    else if(text.includes('color'))
+    responsiveVoice.speak("My favourite color is white");
     
-    
-    
+
 
    // else
    // responsiveVoice.speak('sorry......i am not programmed to answer this question')
@@ -259,5 +270,5 @@ class TypeWriter {
 
 
 function goorac(){
-setInterval(function(){ hello(); }, 10000);
+setInterval(function(){ hello(); }, 5000);
 }
