@@ -37,7 +37,9 @@ function read(text){
     cse();
     else if(text.includes('mechanical'))
     mech();
-    else if(text.includes('cafeteria'))
+    else if(text.includes('admin'))
+    admin();
+     else if(text.includes('cafeteria'))
     cafe();
     else if(text.includes('parking'))
     park();
@@ -111,49 +113,54 @@ function search() {
    setTimeout(mainPage, 19128); 
 }
 
-function garden() {  show('Page2','Page1')
+function garden() {  show('Page5','Page1')
 responsiveVoice.speak('Go straight and cross the statue . take few more steps .turn right.you can see the .E.C.E. and triple . E . block');
-    
+document.getElementById("css").src = "ece.png"
      setTimeout(mainPage, 10000); 
 }
 
 function cse() {  show('Page5','Page1')
 responsiveVoice.speak('Go straight and cross the statue . take few more steps .cross the cafeteria.after taking few steps , turn right .  you can see the c.s.E. and i.t. block');
-    
+    document.getElementById("css").src = "cse.png"
      setTimeout(mainPage, 15000); 
 }
 
-function mech() {  show('Page6','Page1')
+function mech() {  show('Page5','Page1')
 responsiveVoice.speak('Go straight and turn left . go till the end . you can see the mechanical block');
-    
+document.getElementById("css").src = "mech.png"
      setTimeout(mainPage, 15000); 
 }
 
-function cafe() {  show('Page7','Page1')
+function cafe() {  show('Page5','Page1')
 responsiveVoice.speak('Go straight and cross the statue . cross the electrical sciences block .after taking few steps ,  you can see the cafeteria at your left side. Enjoy your food');
-    
+document.getElementById("css").src = "cafe.png"
      setTimeout(mainPage, 15000); 
 }
 
-function park() {  show('Page8','Page1')
+function park() {  show('Page5','Page1')
 responsiveVoice.speak('At few steps from gate . turn right . you can park your vehicle here');
-    
+document.getElementById("css").src = "park.png"
      setTimeout(mainPage, 15000); 
 }
-function civil() {  show('Page9','Page1')
+function civil() {  show('Page5','Page1')
 responsiveVoice.speak('Go straight and turn left . walk few steps . At the right side you can see the civil block');
-    
+document.getElementById("css").src = "civil.png"
      setTimeout(mainPage, 15000); 
 }
-function structural() {  show('Page10','Page1')
+function structural() {  show('Page5','Page1')
 responsiveVoice.speak('Go straight and turn left . walk few steps . After civil block , turn right . You can see structural block');
-    
+document.getElementById("css").src = "structural.png"
      setTimeout(mainPage, 15000); 
 }
 
-function play() {  show('Page11','Page1')
+function play() {  show('Page5','Page1')
 responsiveVoice.speak('Go straight and turn left . walk few steps . at the left side you can find play ground');
-    
+document.getElementById("css").src = "play.png"
+     setTimeout(mainPage, 15000); 
+}
+function admin() {  show('Page5','Page1')
+responsiveVoice.speak('Go straight and cross the statue . turn left . take few steps . turn right . welcome to admin block');
+document.getElementById("css").src ="admin.png"
      setTimeout(mainPage, 15000); 
 }
 function mainPage() {
