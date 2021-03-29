@@ -259,5 +259,5 @@ class TypeWriter {
 
 
 function goorac(){
-setInterval(function(){ hello(); }, 5000);
+setInterval(function(){ hello(); }, 10000);
 }
