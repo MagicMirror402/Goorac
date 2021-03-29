@@ -1,27 +1,52 @@
+function hello() {
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+var recognition = new SpeechRecognition();
+            
+// This runs when the speech recognition service starts
+recognition.onstart = function() {
+  document.getElementById('result').innerHTML = "Listening...";
+  document.getElementById('img1').src='circle2.png'
+};
 
-const btn = document.getElementById('btn');
-
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
-
-recognition.onstart = function(){
-    console.log('You can speak now!!!');
+recognition.onspeechend = function() {
+  
 }
-
-recognition.onresult = function(event){
-    var text = event.results[0][0].transcript;
-    console.log(text);
-    document.getElementById('result').innerHTML = text;
-    document.getElementById('img1').src='circle.png'
-    read(text);
+              
+// This runs when the speech recognition service returns result
+recognition.onresult = function(event) {
+  var text = event.results[0][0].transcript;
+  console.log(text);
+  document.getElementById('result').innerHTML = text;
+  document.getElementById('img1').src='circle.png'
+ 
+  read(text);
+};
+              
+// start recognition
+recognition.start();
 }
 
 function read(text){
   setTimeout(clearResult, 8000);
+  document.getElementById("showskill").src = "https://www.bing.com/search?q=" + text + "&qs=HS&sc=2-0&cvid=5790E035BDA84F518BFDE2AC9EE58276&FORM=QBLH&sp=1";
     var speech = new SpeechSynthesisUtterance();
     speech.text = text;
-    if(text.includes('playground'))
+    if(text.includes('electrical science'))
     garden();
+    else if(text.includes('computer science'))
+    cse();
+    else if(text.includes('mechanical'))
+    mech();
+    else if(text.includes('cafeteria'))
+    cafe();
+    else if(text.includes('parking'))
+    park();
+    else if(text.includes('civil'))
+    civil();
+    else if(text.includes('structural'))
+    structural();
+    else if(text.includes('play'))
+    play();
     else if(text.includes('covid-19'))
     covid() ;
     else if(text.includes('good morning'))
@@ -30,18 +55,110 @@ function read(text){
     responsiveVoice.speak('I m good . How can i help for you')
     else if(text.includes('yourself'))
     responsiveVoice.speak('I m a two way mirror with electronic display behind me . I can show you details like time date weather and news update . And also I can guide you to the various blocks of our college.')
+    else if(text.includes('communication lab'))
+    responsiveVoice.speak("the communication skills lab . E .  N . 0 . 1 is in the left side of the first floor")
+    else if(text.includes('electronics lab 1'))
+    responsiveVoice.speak('electronics lab  . 1 . E . C . 0 . 7 is in the left side of the second floor. ')
+    else if(text.includes('devices'))
+    responsiveVoice.speak("electronics lab  . 1 . E . C . 0 . 7 is in the left side of the second floor.")
+    else if(text.includes('VLSI lab'))
+    responsiveVoice.speak('V . L . S . I .  lab    . E . C . 0 . 9 is in the right side of the second floor. ')
+    else if(text.includes('microwave'))
+    responsiveVoice.speak("microwave and optical fibre lab  .  E . C . 0 . 6 is in the right side of the first floor.")
+    else if(text.includes('PG lab'))
+    responsiveVoice.speak('E . C . P . G . V . L . S . I . 2 .  lab is in the right side of the first floor. ')
+    else if(text.includes('Arif'))
+    responsiveVoice.speak("radio frequency lab  .  E . C . 0 . 5  is in the right side of the first floor.")
+    else if(text.includes('microprocessor'))
+    responsiveVoice.speak("microprocessor and  microcontroller lab  .  E . C . 0 . 3 is in the left side of the first floor.")
+    else if(text.includes('DSP'))
+    responsiveVoice.speak('Digital signal processing lab .  E . C . 0 . 2 .  is in the left side of the first floor. ')
+    else if(text.includes('lecture'))
+    responsiveVoice.speak("lecture hall . E . C . L . 1 . 2 . 3 . is in the first floor , , , . and lecture hall . E . C . L . 4 . 5 . 6 . is in the second floor .")
+    else if(text.includes('Microprocessor'))
+    responsiveVoice.speak("microprocessor and  microcontroller lab  .  E . C . 0 . 3 is in the left side of the first floor.")
+    else if(text.includes('HOD room'))
+    responsiveVoice.speak('H . O . D cabin  .  E . C . S . 1 .  is in the first floor. ')
+    else if(text.includes('ladies staff room'))
+    responsiveVoice.speak("ladies staff room  . E . C . s . 2  . is in the left side of the first floor.")
+    else if(text.includes('research centre'))
+    responsiveVoice.speak("research centre is in the first floor.")
+    else if(text.includes('Gents staff room'))
+    responsiveVoice.speak("gents staff room  . E . C . s . 7  . is in the left side of the second floor.")
+    else if(text.includes('research centre'))
+    responsiveVoice.speak("research centre is in the first floor.")
+    else if(text.includes('library'))
+    responsiveVoice.speak("The department s library is in the left side of the second floor.")
+    else if(text.includes('search'))
+    search();
+    else if(text.includes('triple '))
+    garden();
+    else if(text.includes('information technology'))
+    cse();
     
+    
+    
+
+   // else
+   // responsiveVoice.speak('sorry......i am not programmed to answer this question')
+
+}
+
+
+function search() { 
+   show('Page4','Page1');
+
+   setTimeout(mainPage, 19128); 
 }
 
 function garden() {  show('Page2','Page1')
-     
-var x = document.getElementById("myVideo"); 
-  x.play(); 
-     setTimeout(mainPage, 19128); 
+responsiveVoice.speak('Go straight and cross the statue . take few more steps .turn right.you can see the .E.C.E. and triple . E . block');
+    
+     setTimeout(mainPage, 10000); 
 }
 
+function cse() {  show('Page5','Page1')
+responsiveVoice.speak('Go straight and cross the statue . take few more steps .cross the cafeteria.after taking few steps , turn right .  you can see the c.s.E. and i.t. block');
+    
+     setTimeout(mainPage, 15000); 
+}
+
+function mech() {  show('Page6','Page1')
+responsiveVoice.speak('Go straight and turn left . go till the end . you can see the mechanical block');
+    
+     setTimeout(mainPage, 15000); 
+}
+
+function cafe() {  show('Page7','Page1')
+responsiveVoice.speak('Go straight and cross the statue . cross the electrical sciences block .after taking few steps ,  you can see the cafeteria at your left side. Enjoy your food');
+    
+     setTimeout(mainPage, 15000); 
+}
+
+function park() {  show('Page8','Page1')
+responsiveVoice.speak('At few steps from gate . turn right . you can park your vehicle here');
+    
+     setTimeout(mainPage, 15000); 
+}
+function civil() {  show('Page9','Page1')
+responsiveVoice.speak('Go straight and turn left . walk few steps . At the right side you can see the civil block');
+    
+     setTimeout(mainPage, 15000); 
+}
+function structural() {  show('Page10','Page1')
+responsiveVoice.speak('Go straight and turn left . walk few steps . After civil block , turn right . You can see structural block');
+    
+     setTimeout(mainPage, 15000); 
+}
+
+function play() {  show('Page11','Page1')
+responsiveVoice.speak('Go straight and turn left . walk few steps . at the left side you can find play ground');
+    
+     setTimeout(mainPage, 15000); 
+}
 function mainPage() {
  show('Page1','page2','Page2');
+ div();
  document.getElementById("result").innerHTML = "";
 }
 
@@ -129,4 +246,11 @@ class TypeWriter {
     var text = document.getElementById('txt').value;
     responsiveVoice.speak(text);
     
+}
+
+
+
+
+function goorac(){
+setInterval(function(){ hello(); }, 5000);
 }
