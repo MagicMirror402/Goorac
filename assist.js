@@ -8,8 +8,8 @@ recognition.onstart = function() {
   document.getElementById('img1').src='circle2.png'
 };
 
-recognition.onspeechend = function() {
-  
+recognition.onend = function() {
+  recognition.start()
 }
               
 // This runs when the speech recognition service returns result
@@ -269,6 +269,6 @@ class TypeWriter {
 
 
 
-function goorac(){
-setInterval(function(){ hello(); }, 5000);
-}
+//function goorac(){
+//setInterval(function(){ hello(); }, 5000);
+//}
