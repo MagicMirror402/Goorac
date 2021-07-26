@@ -269,6 +269,6 @@ class TypeWriter {
 
 
 
-//function goorac(){
-//setInterval(function(){ hello(); }, 5000);
-//}
+function goorac(){
+hello(); 
+}
